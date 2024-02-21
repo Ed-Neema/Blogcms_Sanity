@@ -24,7 +24,7 @@ const PostComponent = ({ post }: Props) => {
 
             <div>
                 {post?.tags?.map((tag) => (
-                    <span key={tag?._id} className='mr-2 p-1 rounded-sm text-sm lowercase dark:bg-gray-950 border dark:border-gray-900'>#{tag?.name}</span>
+                    <Link href={`/tag/${tag.slug.current}`} key={tag?._id} className='mr-2 p-1 cursor-pointer rounded-sm text-sm lowercase dark:bg-gray-950 border dark:border-gray-900'>#{tag?.name}</Link>
                 ))}
             </div>
         </div>
